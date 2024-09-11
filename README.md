@@ -1,4 +1,6 @@
 # Rapid-Prototype-1-Tristan-Ryan-Devon-
+## Design Rationale  
+We want players to experience the joy of flying around with a jetpack while overcoming unique challenges. While jet packs have been used in games before, they usually take the form of a temporary power up. We want to test how a jetpack can be used as the primary form of navigation.  
 
 ### What is our Mechanic
 - Jetpack function to fly over pitfalls and navigate through our small obstacle course
