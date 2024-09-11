@@ -11,7 +11,7 @@
 
 # Link of Assets and tutorials
 ## Assets
--(Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
+- (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669  
 
