@@ -30,3 +30,11 @@ We want players to experience the joy of flying around with a jetpack while over
 - The platform is melting and the Penguin is trying to escape
 - Name of Peguin is OrReginald
 
+### Questions for our employer  
+1. What do you expect for our individual process work? 
+2. What level of quality do expect for this prototype? (Graphics, how many mechanics) 
+3. Is it all right to have secondary mechanics to enhance our main mechanic/feature? 
+4. How many bugs are we allowed to ship with? 
+5. Are any bonus marks for additional features that help showcase our main mechanic? 
+6. How do you make a separate document that will show up in proper markdown format?  
+7. What is a GitHub release page? 
