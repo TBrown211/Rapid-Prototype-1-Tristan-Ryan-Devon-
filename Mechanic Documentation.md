@@ -13,7 +13,7 @@ We want players to experience the joy of flying around with a jetpack while over
 
 # Link of Assets and tutorials
 ## Assets
-- (Penguin character asset)https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
+- (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
   ---
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
   ---
@@ -21,8 +21,10 @@ We want players to experience the joy of flying around with a jetpack while over
   ---
 
 ## Link of Tutorials
-- (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4 
-- (The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0 
+- (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4
+ ___
+- (The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0
+ ___
 
 # Random idea’s that must be added for THE MEME 
 
