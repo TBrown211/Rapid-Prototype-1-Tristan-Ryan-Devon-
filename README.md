@@ -15,12 +15,14 @@ We want players to experience the joy of flying around with a jetpack while over
 ## Assets
 - (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
-
-# Random idea’s that must be added for THE MEME 
-
-- Penguin
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669  
 
 ## Link of Tutorials
 - (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4 
 - (The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0 
+
+# Random idea’s that must be added for THE MEME 
+
+- Penguin
+- The platform is melting and the Penguin is trying to escape
+- 
