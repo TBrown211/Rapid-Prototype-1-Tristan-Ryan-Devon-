@@ -11,13 +11,15 @@ We want players to experience the joy of flying around with a jetpack while over
 - We want to see what kind of gameplay challenges can be built around using a jetpack as the primary mode of navigation.
 - We want to know if jetpack gameplay is a fun way to navigate a game world. 
 
-# Link of Assets and tutorials
+# Link of Assets
 ## Assets
 - (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
   ___
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
   ___
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669
+  ___
+-(Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
   ___
 
 ## Link of Tutorials
