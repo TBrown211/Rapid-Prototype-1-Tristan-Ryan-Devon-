@@ -14,11 +14,11 @@ We want players to experience the joy of flying around with a jetpack while over
 # Link of Assets and tutorials
 ## Assets
 - (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
-  ---
+  ___
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
-  ---
+  ___
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669
-  ---
+  ___
 
 ## Link of Tutorials
 - (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4
