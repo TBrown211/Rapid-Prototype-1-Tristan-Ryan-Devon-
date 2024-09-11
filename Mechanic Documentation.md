@@ -19,7 +19,7 @@ We want players to experience the joy of flying around with a jetpack while over
   ___
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669
   ___
--(Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
+- (Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
   ___
 
 ## Link of Tutorials
