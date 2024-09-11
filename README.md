@@ -16,5 +16,5 @@
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669  
 
 ## Link of Tutorials
-- https://www.youtube.com/watch?v=qK11NTBkOz4 \(this is inspiration for the camera positioning\)
-(The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0 
+- (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4 \
+- (The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0 
