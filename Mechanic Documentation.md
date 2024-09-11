@@ -22,6 +22,9 @@ We want players to experience the joy of flying around with a jetpack while over
 - (Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
   ___
 
+- (UI assets) https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-170650
+  ___
+
 ## Link of Tutorials
 - (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4
  ___
