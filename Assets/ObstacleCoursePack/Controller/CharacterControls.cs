@@ -30,6 +30,8 @@ public class CharacterControls : MonoBehaviour {
 
 	// NEW CODE VARIABLE
 
+	public float maxAirTime = 5;
+
 
 
 	void  Start (){
