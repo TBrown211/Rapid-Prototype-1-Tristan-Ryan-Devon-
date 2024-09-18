@@ -28,6 +28,10 @@ public class CharacterControls : MonoBehaviour {
 	public Vector3 checkPoint;
 	private bool slide = false;
 
+	// NEW CODE VARIABLE
+
+
+
 	void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
