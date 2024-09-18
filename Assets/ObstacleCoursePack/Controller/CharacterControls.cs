@@ -19,7 +19,7 @@ public class CharacterControls : MonoBehaviour {
 
 	private float distToGround;
 
-	private bool canMove = true; //If player is not hitted
+	private bool canMove = true; //If player is not hit
 	private bool isStuned = false;
 	private bool wasStuned = false; //If player was stunned before get stunned another time
 	private float pushForce;
@@ -31,8 +31,12 @@ public class CharacterControls : MonoBehaviour {
 	// NEW CODE VARIABLES FOR JETPACK
 
 	public float maxJetPackTime = 5;
-	private bool hasJetPack = false;
+	public float jetPackForce = 10;
 
+	private bool noFuel = false;
+
+	// private bool hasJetPack = false;
+	
 
 	void  Start (){
 		// get the distance to ground
