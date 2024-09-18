@@ -16,7 +16,8 @@ We want players to experience the joy of flying around with a jetpack while over
 - (Penguin character asset) https://assetstore.unity.com/packages/templates/tutorials/dyp-the-penguin-174519
 - (Jet pack asset) https://assetstore.unity.com/packages/3d/props/tools/low-poly-casual-sci-fi-jet-pack-287903
 - (Particle effect assets) https://assetstore.unity.com/packages/vfx/particles/war-fx-5669  
-
+-(Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
+  ___
 ## Link of Tutorials
 - (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4 
 - (The making of fire for the jack pack sound effects) https://www.youtube.com/watch?v=mlpS4t-cps0 
