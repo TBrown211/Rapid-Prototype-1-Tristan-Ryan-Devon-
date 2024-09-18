@@ -28,10 +28,10 @@ public class CharacterControls : MonoBehaviour {
 	public Vector3 checkPoint;
 	private bool slide = false;
 
-	// NEW CODE VARIABLE
+	// NEW CODE VARIABLES FOR JETPACK
 
-	public float maxAirTime = 5;
-
+	public float maxJetPackTime = 5;
+	private bool hasJetPack = false;
 
 
 	void  Start (){
