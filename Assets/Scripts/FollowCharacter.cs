@@ -5,7 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {    
     public Transform player;    //Creating a reference to keep track of players position
-    private Vector3 offset = new Vector3(0, 1f, -0.759f); //The position offset for the jetpack
+    private Vector3 offset = new Vector3(0, 0.73f, -0.759f); //The position offset for the jetpack
     private Vector3 objectRot = new Vector3(15.09f, 0, 0); //The rotation offset
     
     
