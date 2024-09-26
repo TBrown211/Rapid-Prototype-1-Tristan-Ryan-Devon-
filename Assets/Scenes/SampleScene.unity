@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 33955234}
   - component: {fileID: 33955233}
   - component: {fileID: 33955232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back start wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -364,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118369245}
   - component: {fileID: 118369244}
+  - component: {fileID: 118369246}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -395,7 +396,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -494,6 +495,36 @@ Transform:
   - {fileID: 2052300183}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 4.81, y: 2.23, z: 0.72}
+--- !u!114 &118369246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118369243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &123110760
 GameObject:
   m_ObjectHideFlags: 3
@@ -634,6 +665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovableWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7397137975640516144, guid: 474c64e7b6302304bb04e77a9e8809dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7397137975640516145, guid: 474c64e7b6302304bb04e77a9e8809dc,
         type: 3}
       propertyPath: m_Material
@@ -717,7 +753,7 @@ GameObject:
   - component: {fileID: 263147096}
   - component: {fileID: 263147095}
   - component: {fileID: 263147094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back start wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -921,7 +957,7 @@ GameObject:
   - component: {fileID: 286012525}
   - component: {fileID: 286012524}
   - component: {fileID: 286012523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limit (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1062,7 @@ GameObject:
   - component: {fileID: 311813295}
   - component: {fileID: 311813294}
   - component: {fileID: 311813293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Start ground course
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,7 +1167,7 @@ GameObject:
   - component: {fileID: 359875977}
   - component: {fileID: 359875976}
   - component: {fileID: 359875975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left start front (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1236,7 +1272,7 @@ GameObject:
   - component: {fileID: 384799851}
   - component: {fileID: 384799850}
   - component: {fileID: 384799849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'Right start front '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1469,6 +1505,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallMovable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3872001226836439017, guid: 1f9416082698e614ebb7003c2d80098b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3872001226836439029, guid: 1f9416082698e614ebb7003c2d80098b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1546,7 +1587,7 @@ GameObject:
   - component: {fileID: 680159804}
   - component: {fileID: 680159803}
   - component: {fileID: 680159802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundSlide (1)
   m_TagString: Slide
   m_Icon: {fileID: 0}
@@ -1828,7 +1869,7 @@ GameObject:
   - component: {fileID: 835723024}
   - component: {fileID: 835723023}
   - component: {fileID: 835723022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left start front
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1929,10 +1970,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5263193848945581321, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263193849274771168, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5263193850122822931, guid: de4e8ae22411dba4f971edf49f8738f2,
         type: 3}
       propertyPath: m_Name
       value: Pendulum (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263193850122822931, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5263193850122822932, guid: de4e8ae22411dba4f971edf49f8738f2,
         type: 3}
@@ -2006,7 +2062,7 @@ GameObject:
   - component: {fileID: 960535204}
   - component: {fileID: 960535203}
   - component: {fileID: 960535202}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right start front  (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2111,7 +2167,7 @@ GameObject:
   - component: {fileID: 981446915}
   - component: {fileID: 981446914}
   - component: {fileID: 981446913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2217,6 +2273,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallPlat (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2644991042193281520, guid: bd117f6e0af0c2942926e61c209b253f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2644991042193281532, guid: bd117f6e0af0c2942926e61c209b253f,
         type: 3}
       propertyPath: m_RootOrder
@@ -2289,7 +2350,7 @@ GameObject:
   - component: {fileID: 1114057987}
   - component: {fileID: 1114057986}
   - component: {fileID: 1114057985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right start wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2394,7 +2455,7 @@ GameObject:
   - component: {fileID: 1153159077}
   - component: {fileID: 1153159076}
   - component: {fileID: 1153159075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2496,7 +2557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160981162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2595,7 @@ GameObject:
   - component: {fileID: 1209997588}
   - component: {fileID: 1209997587}
   - component: {fileID: 1209997586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right start wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2635,10 +2696,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7174246026199188035, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246026724477143, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246027539500287, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7174246027598809766, guid: a48714e39c2ecc644b62544a3a53c53a,
         type: 3}
       propertyPath: m_Name
       value: RBCubes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246027598809766, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7174246027598809767, guid: a48714e39c2ecc644b62544a3a53c53a,
         type: 3}
@@ -2718,7 +2799,7 @@ GameObject:
   - component: {fileID: 1474559513}
   - component: {fileID: 1474559512}
   - component: {fileID: 1474559511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,7 +2904,7 @@ GameObject:
   - component: {fileID: 1567670762}
   - component: {fileID: 1567670761}
   - component: {fileID: 1567670760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left start wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2963,7 +3044,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -3094,7 +3175,7 @@ GameObject:
   - component: {fileID: 1891219389}
   - component: {fileID: 1891219388}
   - component: {fileID: 1891219387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limit (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3234,7 +3315,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -3278,7 +3359,7 @@ GameObject:
   - component: {fileID: 1934681358}
   - component: {fileID: 1934681357}
   - component: {fileID: 1934681356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundSlide
   m_TagString: Slide
   m_Icon: {fileID: 0}
@@ -3383,7 +3464,7 @@ GameObject:
   - component: {fileID: 1936880350}
   - component: {fileID: 1936880349}
   - component: {fileID: 1936880348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3488,7 +3569,7 @@ GameObject:
   - component: {fileID: 1966540580}
   - component: {fileID: 1966540579}
   - component: {fileID: 1966540578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left start wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3628,7 +3709,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -3672,7 +3753,7 @@ GameObject:
   - component: {fileID: 2053579639}
   - component: {fileID: 2053579638}
   - component: {fileID: 2053579637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Start ground course (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +3859,7 @@ GameObject:
   - component: {fileID: 2129803947}
   - component: {fileID: 2129803946}
   - component: {fileID: 2129803949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KillZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3896,6 +3977,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1036221829725524016, guid: 04400a104b4c4574ab6d4419858e994b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1036221829725524027, guid: 04400a104b4c4574ab6d4419858e994b,
         type: 3}
       propertyPath: m_RootOrder
@@ -3951,6 +4037,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1036221831037305443, guid: 04400a104b4c4574ab6d4419858e994b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3987,6 +4078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FallPlat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644991042193281520, guid: bd117f6e0af0c2942926e61c209b253f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2644991042193281532, guid: bd117f6e0af0c2942926e61c209b253f,
         type: 3}
@@ -4056,10 +4152,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2776357498395779984, guid: a70841853b0e99545a7dc761ea9def4d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2776357498414740517, guid: a70841853b0e99545a7dc761ea9def4d,
         type: 3}
       propertyPath: m_Name
       value: RotationPlat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776357498414740517, guid: a70841853b0e99545a7dc761ea9def4d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2776357498414740537, guid: a70841853b0e99545a7dc761ea9def4d,
         type: 3}
@@ -4133,6 +4239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallMovable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872001226836439017, guid: 1f9416082698e614ebb7003c2d80098b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3872001226836439029, guid: 1f9416082698e614ebb7003c2d80098b,
         type: 3}
@@ -4212,6 +4323,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rotator
       objectReference: {fileID: 0}
+    - target: {fileID: 4416347176131427352, guid: 3925e022072f0474a8dab88c2fdaf0ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4416347176131427356, guid: 3925e022072f0474a8dab88c2fdaf0ce,
         type: 3}
       propertyPath: m_RootOrder
@@ -4267,6 +4383,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4416347176314923500, guid: 3925e022072f0474a8dab88c2fdaf0ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4280,6 +4401,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4467461681047675899, guid: 7bb56e75164d29c4189de79dd5887e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467461681439957057, guid: 7bb56e75164d29c4189de79dd5887e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4467461681906247325, guid: 7bb56e75164d29c4189de79dd5887e8e,
         type: 3}
       propertyPath: m_RootOrder
@@ -4340,6 +4471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotationX
       objectReference: {fileID: 0}
+    - target: {fileID: 4467461681906247399, guid: 7bb56e75164d29c4189de79dd5887e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4353,10 +4489,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5263193848945581321, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263193849274771168, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5263193850122822931, guid: de4e8ae22411dba4f971edf49f8738f2,
         type: 3}
       propertyPath: m_Name
       value: Pendulum
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263193850122822931, guid: de4e8ae22411dba4f971edf49f8738f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5263193850122822932, guid: de4e8ae22411dba4f971edf49f8738f2,
         type: 3}
@@ -4486,6 +4637,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bounce
       objectReference: {fileID: 0}
+    - target: {fileID: 6223617057227795077, guid: 07ec32bcd6a21e34d9d0be169af45608,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223617057752392046, guid: 07ec32bcd6a21e34d9d0be169af45608,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4499,10 +4660,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7174246026199188035, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246026724477143, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246027539500287, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7174246027598809766, guid: a48714e39c2ecc644b62544a3a53c53a,
         type: 3}
       propertyPath: m_Name
       value: RBCubes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174246027598809766, guid: a48714e39c2ecc644b62544a3a53c53a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7174246027598809767, guid: a48714e39c2ecc644b62544a3a53c53a,
         type: 3}
@@ -4576,6 +4757,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovableWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397137975640516144, guid: 474c64e7b6302304bb04e77a9e8809dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7397137975640516145, guid: 474c64e7b6302304bb04e77a9e8809dc,
         type: 3}
@@ -4664,7 +4850,7 @@ PrefabInstance:
     - target: {fileID: 8125632388333684070, guid: 74fe7eed3ad8ec84bb8770355f363fda,
         type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8125632388333684070, guid: 74fe7eed3ad8ec84bb8770355f363fda,
         type: 3}
@@ -4705,6 +4891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000009489331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125632388333684075, guid: 74fe7eed3ad8ec84bb8770355f363fda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8125632388429620746, guid: 74fe7eed3ad8ec84bb8770355f363fda,
         type: 3}
@@ -4775,6 +4966,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125632388429620749, guid: 74fe7eed3ad8ec84bb8770355f363fda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125632389348269527, guid: 74fe7eed3ad8ec84bb8770355f363fda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
