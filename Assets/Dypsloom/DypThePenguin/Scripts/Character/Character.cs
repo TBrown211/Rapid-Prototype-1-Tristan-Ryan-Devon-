@@ -53,6 +53,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected bool isFlying; //Boolean checking when the player is flying
         protected float currentFuel; //This will keep track of player's fuel amount
 
+        public ParticleSystem jetFlames;
+        //-------------------------------------------------------------------------------
 
         protected Rigidbody m_Rigidbody;
         protected CharacterController m_CharacterController;
@@ -107,6 +109,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             m_Animator = GetComponent<Animator>();
             m_Inventory = GetComponent<Inventory>();
             m_CharacterDamageable = GetComponent<IDamageable>();
+            
 
             AssignCharacterControllers();
         }
