@@ -44,6 +44,16 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         [Tooltip("Death Effect.")]
         [SerializeField] protected GameObject m_DeathEffects;
 
+        //Jetpack Components - Ryan
+        [SerializeField] protected float jetpackForce = 10f; //The applied upward force on jetpack
+        [SerializeField] protected float maxFuel = 5f; //Max amount of fuel 
+        [SerializeField] protected float fuelConsumption = 1f; //The consumption rate of the fuel
+        [SerializeField] protected float fuelRecharge = 5f; //The rate at which the fuel recharges
+
+        protected bool isFlying; //Boolean checking when the player is flying
+        protected float currentFuel; //This will keep track of player's fuel amount
+
+
         protected Rigidbody m_Rigidbody;
         protected CharacterController m_CharacterController;
         protected Animator m_Animator;
@@ -90,6 +100,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected virtual void Awake()
         {
             m_Camera = Camera.main;
+            currentFuel = maxFuel;
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CharacterController = GetComponent<CharacterController>();
@@ -131,6 +142,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             m_CharacterMover.Tick();
             m_CharacterRotator.Tick();
             m_CharacterAnimator.Tick();
+            JetpackMechanic();
         }
 
         /// <summary>
@@ -198,6 +210,39 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             transform.position = m_SpawnTransform != null ? m_SpawnTransform.position : new Vector3(0,1,0);
             gameObject.SetActive(true);
             m_IsDead = false;
+        }
+          
+        protected void JetpackMechanic()
+        {
+            if(Input.GetKeyDown(KeyCode.Space) && currentFuel > 0)
+            {
+                ActivateJetpack();
+            }
+            else
+            {
+                DeactivateJetpack();
+            }
+
+            if(!isFlying && currentFuel < maxFuel)
+            {
+                currentFuel += fuelRecharge * Time.deltaTime;
+                currentFuel = Mathf.Min(currentFuel, maxFuel);
+            }
+        }
+
+        protected void ActivateJetpack()
+        {
+            isFlying = true;
+
+            Vector3 flyForce = Vector3.up * m_JumpForce; //Setting and applying force
+            m_CharacterController.Move(flyForce * Time.deltaTime); 
+
+            currentFuel -= fuelConsumption * Time.deltaTime; //Reducing the fuel amount
+        }
+
+        protected void DeactivateJetpack()
+        {
+            isFlying = false; 
         }
     }
 }
