@@ -19,7 +19,8 @@ We want players to experience the joy of flying around with a jetpack while over
 - (Obstacle Course Pack assets) https://assetstore.unity.com/packages/templates/packs/obstacle-course-pack-178169
 - (Jetpack sound effect) https://www.youtube.com/watch?v=CG20klFVEag
 - (Landing sound effect) https://www.youtube.com/watch?v=FW4tiK_N9kc
-- (Cartoon sound effect) https://www.youtube.com/watch?v=B5EYAWGumZU 
+- (Cartoon sound effect) https://www.youtube.com/watch?v=B5EYAWGumZU
+- (UI pack) https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-170650
   ___
 ## Link of Tutorials
 - (this is inspiration for the camera positioning\) https://www.youtube.com/watch?v=qK11NTBkOz4 
