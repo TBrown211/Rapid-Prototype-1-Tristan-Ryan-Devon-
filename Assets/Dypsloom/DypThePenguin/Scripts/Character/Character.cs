@@ -46,7 +46,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
         //Jetpack Components - Ryan
         [SerializeField] protected float jetpackForce = 10f; //The applied upward force on jetpack
-        [SerializeField] protected float maxFuel = 50f; //Max amount of fuel 
+        [SerializeField] protected float maxFuel = 10f; //Max amount of fuel 
         [SerializeField] protected float fuelConsumption = 1f; //The consumption rate of the fuel
         [SerializeField] protected float fuelRecharge = 5f; //The rate at which the fuel recharges
 
@@ -143,6 +143,15 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                
             }
 
+            if(Input.GetKeyDown(KeyCode.Space) && currentFuel > 0)
+            {
+                m_Gravity = 0f; 
+            }
+            else
+            {
+                m_Gravity = 1f;
+            }
+
             m_CharacterMover.Tick();
             m_CharacterRotator.Tick();
             m_CharacterAnimator.Tick();
@@ -215,7 +224,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             gameObject.SetActive(true);
             m_IsDead = false;
         }
-          
+       
+        //Ryan - Jetpack Mechanic Class
         protected void JetpackMechanic()
         {
             if(Input.GetKey(KeyCode.Space) && currentFuel > 0)
@@ -229,8 +239,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
             if (!isFlying && currentFuel < maxFuel)
             {
-                currentFuel += fuelRecharge * Time.deltaTime;
-                currentFuel = Mathf.Min(currentFuel, maxFuel); // Cap fuel at max value
+                currentFuel += fuelRecharge * Time.deltaTime; //Fuel recharges when on ground
+                currentFuel = Mathf.Min(currentFuel, maxFuel); //Cap fuel at max value
             }
         }
 
@@ -248,6 +258,12 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         {
             isFlying = false;
         }
+
+        private void OnGUI()
+        {
+            
+        }
+        //------------------------------------------------------------------------------
     }
 }
 
