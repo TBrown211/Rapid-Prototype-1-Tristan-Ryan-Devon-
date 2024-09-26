@@ -261,7 +261,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
         private void OnGUI()
         {
-            
+            GUI.Box(new Rect(10, 20, 200 * (currentFuel / maxFuel), 20), $"Fuel: {Mathf.Ceil(currentFuel)}");
         }
         //------------------------------------------------------------------------------
     }
