@@ -46,7 +46,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
         //Jetpack Components - Ryan
         [SerializeField] protected float jetpackForce = 10f; //The applied upward force on jetpack
-        [SerializeField] protected float maxFuel = 5f; //Max amount of fuel 
+        [SerializeField] protected float maxFuel = 50f; //Max amount of fuel 
         [SerializeField] protected float fuelConsumption = 1f; //The consumption rate of the fuel
         [SerializeField] protected float fuelRecharge = 5f; //The rate at which the fuel recharges
 
@@ -135,6 +135,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 if (m_CharacterMover.IsJumping == false) {
                     IsGrounded = true;
                 } else {
+                    IsGrounded = false;
                 }
                
             }
@@ -214,7 +215,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
           
         protected void JetpackMechanic()
         {
-            if(Input.GetKeyDown(KeyCode.Space) && currentFuel > 0)
+            if(Input.GetKey(KeyCode.Space) && currentFuel > 0)
             {
                 ActivateJetpack();
             }
@@ -223,10 +224,10 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 DeactivateJetpack();
             }
 
-            if(!isFlying && currentFuel < maxFuel)
+            if (!isFlying && currentFuel < maxFuel)
             {
                 currentFuel += fuelRecharge * Time.deltaTime;
-                currentFuel = Mathf.Min(currentFuel, maxFuel);
+                currentFuel = Mathf.Min(currentFuel, maxFuel); // Cap fuel at max value
             }
         }
 
@@ -234,7 +235,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         {
             isFlying = true;
 
-            Vector3 flyForce = Vector3.up * m_JumpForce; //Setting and applying force
+            Vector3 flyForce = Vector3.up * jetpackForce; //Setting and applying force
             m_CharacterController.Move(flyForce * Time.deltaTime); 
 
             currentFuel -= fuelConsumption * Time.deltaTime; //Reducing the fuel amount
@@ -242,7 +243,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
 
         protected void DeactivateJetpack()
         {
-            isFlying = false; 
+            isFlying = false;
         }
     }
 }
