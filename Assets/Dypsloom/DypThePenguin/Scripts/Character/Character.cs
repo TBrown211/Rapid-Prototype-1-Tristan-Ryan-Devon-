@@ -44,6 +44,18 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         [Tooltip("Death Effect.")]
         [SerializeField] protected GameObject m_DeathEffects;
 
+        //Jetpack Components - Ryan
+        [SerializeField] protected float jetpackForce = 10f; //The applied upward force on jetpack
+        [SerializeField] protected float maxFuel = 10f; //Max amount of fuel 
+        [SerializeField] protected float fuelConsumption = 1f; //The consumption rate of the fuel
+        [SerializeField] protected float fuelRecharge = 5f; //The rate at which the fuel recharges
+
+        protected bool isFlying; //Boolean checking when the player is flying
+        protected float currentFuel; //This will keep track of player's fuel amount
+
+        public ParticleSystem jetFlames;
+        //-------------------------------------------------------------------------------
+
         protected Rigidbody m_Rigidbody;
         protected CharacterController m_CharacterController;
         protected Animator m_Animator;
@@ -90,12 +102,14 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected virtual void Awake()
         {
             m_Camera = Camera.main;
+            currentFuel = maxFuel;
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CharacterController = GetComponent<CharacterController>();
             m_Animator = GetComponent<Animator>();
             m_Inventory = GetComponent<Inventory>();
             m_CharacterDamageable = GetComponent<IDamageable>();
+            
 
             AssignCharacterControllers();
         }
@@ -124,13 +138,24 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 if (m_CharacterMover.IsJumping == false) {
                     IsGrounded = true;
                 } else {
+                    IsGrounded = false;
                 }
                
+            }
+
+            if(Input.GetKeyDown(KeyCode.Space) && currentFuel > 0)
+            {
+                m_Gravity = 0f; 
+            }
+            else
+            {
+                m_Gravity = 1f;
             }
 
             m_CharacterMover.Tick();
             m_CharacterRotator.Tick();
             m_CharacterAnimator.Tick();
+            JetpackMechanic();
         }
 
         /// <summary>
@@ -199,6 +224,46 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             gameObject.SetActive(true);
             m_IsDead = false;
         }
+       
+        //Ryan - Jetpack Mechanic Class
+        protected void JetpackMechanic()
+        {
+            if(Input.GetKey(KeyCode.Space) && currentFuel > 0)
+            {
+                ActivateJetpack();
+            }
+            else
+            {
+                DeactivateJetpack();
+            }
+
+            if (!isFlying && IsGrounded)
+            {
+                currentFuel += fuelRecharge * Time.deltaTime; //Fuel recharges when on ground
+                currentFuel = Mathf.Min(currentFuel, maxFuel); //Cap fuel at max value
+            }
+        }
+
+        protected void ActivateJetpack()
+        {
+            isFlying = true;
+
+            Vector3 flyForce = Vector3.up * jetpackForce; //Setting and applying force
+            m_CharacterController.Move(flyForce * Time.deltaTime); 
+
+            currentFuel -= fuelConsumption * Time.deltaTime; //Reducing the fuel amount
+        }
+
+        protected void DeactivateJetpack()
+        {
+            isFlying = false;
+        }
+
+        private void OnGUI()
+        {
+            GUI.Box(new Rect(10, 20, 200 * (currentFuel / maxFuel), 20), $"Fuel: {Mathf.Ceil(currentFuel)}");
+        }
+        //------------------------------------------------------------------------------
     }
 }
 
