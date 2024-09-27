@@ -237,7 +237,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                 DeactivateJetpack();
             }
 
-            if (!isFlying && currentFuel < maxFuel)
+            if (!isFlying && IsGrounded)
             {
                 currentFuel += fuelRecharge * Time.deltaTime; //Fuel recharges when on ground
                 currentFuel = Mathf.Min(currentFuel, maxFuel); //Cap fuel at max value
