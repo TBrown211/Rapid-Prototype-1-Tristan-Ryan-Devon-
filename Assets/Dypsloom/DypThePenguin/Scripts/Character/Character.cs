@@ -12,6 +12,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
     using System.Threading.Tasks;
     using UnityEngine;
     using CharacterController = UnityEngine.CharacterController;
+    using UnityEngine.UI;
 
     /// <summary>
     /// The character controller.
@@ -54,6 +55,11 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected float currentFuel; //This will keep track of player's fuel amount
 
         public ParticleSystem jetFlames;
+
+
+        // UI - Tristan
+
+        public Image fuelUI;
         //-------------------------------------------------------------------------------
 
         protected Rigidbody m_Rigidbody;
@@ -252,6 +258,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             m_CharacterController.Move(flyForce * Time.deltaTime); 
 
             currentFuel -= fuelConsumption * Time.deltaTime; //Reducing the fuel amount
+
+            fuelUI.fillAmount = currentFuel / maxFuel;
         }
 
         protected void DeactivateJetpack()
@@ -263,6 +271,9 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         {
             GUI.Box(new Rect(10, 20, 200 * (currentFuel / maxFuel), 20), $"Fuel: {Mathf.Ceil(currentFuel)}");
         }
+
+
+
         //------------------------------------------------------------------------------
     }
 }
