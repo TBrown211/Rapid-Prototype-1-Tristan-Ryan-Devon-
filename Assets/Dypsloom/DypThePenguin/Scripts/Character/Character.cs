@@ -51,9 +51,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         [SerializeField] protected float fuelRecharge = 5f; //The rate at which the fuel recharges
 
         protected bool isFlying; //Boolean checking when the player is flying
-        protected float currentFuel; //This will keep track of player's fuel amount
-
-        public ParticleSystem jetFlames;
+        protected float currentFuel; //This will keep track of player's fuel amount       
         //-------------------------------------------------------------------------------
 
         protected Rigidbody m_Rigidbody;
@@ -102,7 +100,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected virtual void Awake()
         {
             m_Camera = Camera.main;
-            currentFuel = maxFuel;
+            currentFuel = maxFuel; //Assigning current fuel value to max value upon start of game            
+           
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CharacterController = GetComponent<CharacterController>();
@@ -143,13 +142,14 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                
             }
 
+            //When player hits space key and fuel is greater than 0, allow player to fly
             if(Input.GetKeyDown(KeyCode.Space) && currentFuel > 0)
             {
-                m_Gravity = 0f; 
+                m_Gravity = 0f; //Turn off gravity when fuel isn't empty                 
             }
             else
             {
-                m_Gravity = 1f;
+                m_Gravity = 1f;                
             }
 
             m_CharacterMover.Tick();
@@ -230,11 +230,11 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         {
             if(Input.GetKey(KeyCode.Space) && currentFuel > 0)
             {
-                ActivateJetpack();
+                ActivateJetpack();                
             }
             else
             {
-                DeactivateJetpack();
+                DeactivateJetpack();                
             }
 
             if (!isFlying && IsGrounded)
